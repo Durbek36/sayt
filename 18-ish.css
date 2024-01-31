@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.asosiy{
+   background-image: url(rasmlar/bino.webp);
+   background-size: cover;
+   background-repeat: no-repeat;
+   height: 100vh;
+   width: 100%;
+   background-position: center;
+   background-attachment: fixed;
+}
+.menu{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 0px 20px ;
+    background-color: rgba(0, 255, 255, 0.529);
+
+}
+.menu h1{
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    border-top: 3px solid orange;
+    border-left: 3px solid orange;
+    border-bottom: 3px solid orange;
+    width: 50px;
+    padding: 7px 15px;
+
+}
+.link a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    margin-right: 50px;
+    font-family: sans-serif;
+    transition: all 0.3s ease;
+}
+.link a:hover{
+    color: orange;
+}
+.orta{
+    display: flex;
+    align-items: center;
+    height: 80vh;
+    padding-left: 30px;
+}
+.orta1 h1{
+    font-family: sans-serif;
+    font-size: 50px;
+    color: white;
+}
+.btn a{
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+    padding: 10px 30px ;
+    border: 1px solid  white;
+    border-radius: 20px;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+.btn a:hover{
+    background-color: rgba(0, 0, 0, 0.511);
+}
+.btn{
+    margin-top: 20px;
+}
+.link i{
+    display: none;
+}
+.asosiy1{
+    margin-top: 70px;
+}
+.text{
+    display: flex;
+    justify-content: center;
+
+}
+.text h1{
+    font-family: sans-serif;
+    color: orange;
+}
+.a{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 350px);
+    grid-template-rows: 300px;
+    grid-gap: 30px;
+    margin-top: 30px;
+}
+.b img{
+    width: 100px;
+    height: 100px;
+}
+.d img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 30px;
+}
+.img{
+    display: flex;
+    justify-content: center;
+}
+.text1{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.text1 h1{
+    font-size: 25px;
+    font-family: sans-serif;
+}
+.hr{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.hr hr{
+    border: 3px solid black;
+    width: 80px;
+}
+.b p{
+    text-align: center;
+    margin-top: 30px;
+    line-height: 28px;
+}
+.d p{
+    text-align: center;
+    margin-top: 30px;
+    line-height: 28px;
+}
+.asosiy2{
+    width: 100%;
+    height: 350px;
+    margin-top: 50px;
+    background-color: rgb(255, 119, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text2{
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+    color: white;
+}
+.c hr{
+    border-color: white;
+}
+.c p{
+    text-align: center;
+    width: 800px;
+    line-height: 25px;
+    font-family: sans-serif;
+    color: white;
+    margin-top: 50px;
+}
+.c a{
+    text-align: center;
+    text-decoration: none;
+    color: rgb(255, 119, 0);
+    padding: 10px 20px ;
+    background-color: white;
+    font-family: sans-serif;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+.c a:hover{
+    background-color: rgba(0, 0, 0, 0.53);
+    color: white;
+}
+.link4{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.asosiy3{
+    margin-top: 50px;
+}
+.text3{
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+    color: orange;
+}
+.qurilish{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 300px);
+    grid-template-rows: 400px;
+    grid-gap: 20px;
+    margin-top: 50px;
+}
+.text4{
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+    color: orange;
+}
+.asosiy4{
+    margin-top: 100px;
+}
+.mamlakat{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 320px);
+    grid-template-rows: 430px;
+    grid-gap: 30px;
+    margin-top: 50px;
+}
+.e img{
+    width: 100%;
+    height: 200px;
+}
+.e h1{
+    font-size: 22px;
+    font-family: sans-serif;
+}
+.e h2{
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    text-decoration: line-through;
+}
+.e p{
+    line-height: 25px;
+    margin-top: 10px;
+}
+.e a{
+    text-decoration: none;
+    padding: 5px 20px ;
+    border-radius: 20px;
+    border: 2px solid gold;
+    color: gold;
+    font-family: sans-serif;
+    transition: all 0.3s ease;
+}
+.e a:hover{
+    background-color: rgba(0, 8, 255, 0.596);
+}
+.link5{
+    margin-top: 30px;
+}

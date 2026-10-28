@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090914">
+<title>Jasmena uchun — samimiy tilaklar ✨</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600&display=swap');
+:root{--gold:#f0d2a0;--cream:#fff1df;--bg:#090914;--pink:#f3b9d5}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);color:var(--cream);font-family:Manrope,Arial,sans-serif}
+body{overflow-x:hidden;background:radial-gradient(ellipse at 50% 0%,#29203c 0%,#10101f 45%,#07070d 100%)}
+#stars{position:fixed;inset:0;pointer-events:none;opacity:.85;z-index:0}
+#fx{position:fixed;inset:0;pointer-events:none;z-index:10;overflow:hidden}
+main{position:relative;z-index:1;min-height:100svh;display:flex;align-items:center;justify-content:center;padding:18px 14px}
+.scene{display:none;width:min(720px,100%);min-height:min(680px,calc(100svh - 36px));border:1px solid #cda66b66;border-radius:24px;position:relative;overflow:hidden;padding:clamp(25px,6vw,58px);background:linear-gradient(155deg,#171626ed,#0b0a14f5 70%);box-shadow:0 24px 90px #0008;text-align:center;isolation:isolate}
+.scene.active{display:flex;flex-direction:column;align-items:center;justify-content:center;animation:sceneIn .85s cubic-bezier(.2,.8,.2,1) both}
+.scene:before{content:"";position:absolute;inset:12px;border:1px solid #f0d2a01c;border-radius:17px;pointer-events:none;z-index:-1}
+.scene:after{content:"";position:absolute;inset:-50%;z-index:-2;pointer-events:none;background:conic-gradient(from 0deg,transparent,#f4ce8c12,transparent,#d8a6ff12,transparent);animation:slowSpin 18s linear infinite}
+@keyframes sceneIn{from{opacity:0;transform:translateY(22px) scale(.97);filter:blur(4px)}to{opacity:1;transform:none;filter:blur(0)}}
+@keyframes slowSpin{to{transform:rotate(360deg)}}
+.kicker{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;animation:glow 3s ease-in-out infinite}
+h1,h2,.serif{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500}
+h1{font-size:clamp(58px,14vw,100px);line-height:.9;margin:8px 0 18px;color:var(--gold);font-style:italic;text-shadow:0 0 12px #f4c98b66,0 0 42px #e6a95a55;animation:titleFloat 4s ease-in-out infinite}
+h2{font-size:clamp(34px,8vw,53px);line-height:1.05;margin:0 0 22px;color:var(--gold);text-shadow:0 0 24px #f0c17e30}
+p{max-width:500px;font-size:clamp(14px,3.5vw,17px);line-height:1.85;color:#e7dce0;margin:8px auto}
+.subtitle{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(19px,5vw,25px);font-style:italic;color:#f9e8d7}
+.moon{width:105px;height:105px;border-radius:50%;margin:18px auto;position:relative;box-shadow:0 0 70px #e6b76c26;animation:moonFloat 5s ease-in-out infinite}
+.moon:before{content:"";position:absolute;inset:12px;border-radius:50%;background:linear-gradient(145deg,#fff1c9,#dba85f);box-shadow:0 0 35px #f2cc8a88,0 0 85px #e6a95a44;animation:moonGlow 3s ease-in-out infinite}
+.moon:after{content:"";position:absolute;width:91px;height:91px;top:-3px;left:31px;border-radius:50%;background:#141322}
+button{position:relative;overflow:hidden;border:1px solid #e5c48f;background:#17131f;color:var(--cream);padding:13px 22px;border-radius:999px;font:500 13px Manrope,Arial;cursor:pointer;transition:transform .25s,box-shadow .25s,background .25s}
+button:before{content:"";position:absolute;inset:0;transform:translateX(-120%);background:linear-gradient(110deg,transparent,#fff8d955,transparent);transition:transform .6s}
+button:hover{background:#3a2b3d;box-shadow:0 0 22px #e5c48f66,0 0 50px #cba0ff22;transform:translateY(-3px) scale(1.035)}
+button:hover:before{transform:translateX(120%)}
+button:active{transform:scale(.97)}
+.actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:26px}
+.progress{position:absolute;top:26px;right:27px;font-size:11px;color:#c7b6b7;letter-spacing:.1em}
+.ornament{color:var(--gold);font-size:23px;margin:15px 0;text-shadow:0 0 20px #f0d2a0aa;animation:glow 2.5s ease-in-out infinite}
+.wishes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;width:100%;margin-top:14px}
+.wish{border:1px solid #d9b77d35;border-radius:15px;padding:17px 10px;background:#ffffff05;font-size:12px;line-height:1.6;color:#e8d8d6;transition:transform .35s,border-color .35s,background .35s,box-shadow .35s;animation:rise .8s both}
+.wish:nth-child(2){animation-delay:.12s}.wish:nth-child(3){animation-delay:.24s}.wish:nth-child(4){animation-delay:.36s}
+.wish:hover{transform:translateY(-7px) rotate(-1deg);border-color:#f0d2a0bb;background:#f0d2a012;box-shadow:0 12px 30px #0005,0 0 25px #e9c88b20}
+.wish b{display:block;color:var(--gold);font-size:23px;font-weight:400;margin-bottom:6px;transition:transform .35s,text-shadow .35s}
+.wish:hover b{transform:scale(1.25) rotate(8deg);text-shadow:0 0 20px #f0d2a0}
+.note{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:clamp(20px,5vw,28px);line-height:1.5;color:#f3dfca}
+.gift-wrap{height:175px;display:grid;place-items:center;position:relative;margin:4px auto 10px;width:220px;filter:drop-shadow(0 0 30px #f2c77d30)}
+.gift{position:relative;width:120px;height:100px;background:linear-gradient(135deg,#a76d42,#6f3c31);border-radius:5px;box-shadow:0 0 60px #f6c77d44;animation:giftFloat 2.5s ease-in-out infinite}
+.gift:before{content:"";position:absolute;left:47px;top:0;width:25px;height:100%;background:#f4d49b}
+.gift:after{content:"";position:absolute;left:-7px;top:-19px;width:134px;height:25px;background:linear-gradient(90deg,#c48a55,#f1d6a0,#b77b47);border-radius:4px}
+.bow{position:absolute;top:-39px;left:40px;width:40px;height:28px;border:8px solid #f0d19b;border-radius:50% 50% 0 50%;transform:rotate(25deg);z-index:2}
+.bow:after{content:"";position:absolute;width:40px;height:28px;border:8px solid #f0d19b;border-radius:50% 50% 50% 0;left:20px;top:-7px;transform:rotate(-50deg)}
+.spark{position:absolute;color:var(--gold);font-size:20px;animation:twinkle 2s infinite alternate}
+.hidden-message{display:none;margin-top:18px;padding:20px;border-radius:15px;background:#e4c28b12;border:1px solid #e4c28b44}
+.hidden-message.show{display:block;animation:sceneIn .6s ease}
+footer{font-size:10px;color:#9c8f9c;margin-top:22px;letter-spacing:.12em}
+.floating{position:fixed;top:-30px;left:0;color:var(--gold);font-size:20px;pointer-events:none;animation:fall linear forwards;text-shadow:0 0 12px currentColor}
+@keyframes fall{to{transform:translate3d(var(--drift),110vh,0) rotate(540deg);opacity:0}}
+@keyframes titleFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes moonFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@keyframes moonGlow{0%,100%{filter:brightness(1)}50%{filter:brightness(1.25)}}
+@keyframes glow{0%,100%{opacity:.75;text-shadow:0 0 5px #f0d2a0}50%{opacity:1;text-shadow:0 0 18px #f0d2a0}}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@keyframes giftFloat{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-10px) rotate(1deg)}}
+@keyframes twinkle{to{opacity:.25;transform:scale(.7) rotate(15deg)}}
+@media(max-width:420px){.scene{min-height:calc(100svh - 30px);padding:30px 23px}.wishes{gap:8px}.wish{padding:12px 8px}.progress{top:23px;right:23px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+</style></head>
+<body><canvas id="stars"></canvas><div id="fx"></div><main>
+<section class="scene active" data-scene="0"><div class="progress">01 / 06</div><div class="kicker">Bugun senga atalgan kichik syurpriz</div><div class="moon"></div><h1>Jasmena</h1><div class="subtitle">Tug‘ilgan kuning bilan! ✨</div><p>Ushbu kichik tabrik senga yaxshi kayfiyat va chiroyli xotira ulashsin.</p><div class="actions"><button onclick="go(1)">Syurprizni ochish →</button></div><footer>ENG SAMIMIY TILAKLAR BILAN</footer></section>
+<section class="scene" data-scene="1"><div class="progress">02 / 06</div><div class="kicker">Senga chin dildan</div><h2>Jasmena,</h2><p class="note">Hayoting doimo quvonchli lahzalar va yaxshi insonlarga boy bo‘lsin.</p><div class="ornament">✦ ❧ ✦</div><p>Yuzingdan tabassum, qalbingdan xotirjamlik arimasin. Har bir kuning kechagidan-da chiroyli o‘tsin.</p><div class="actions"><button onclick="go(2)">Keyingi tilak →</button></div></section>
+<section class="scene" data-scene="2"><div class="progress">03 / 06</div><div class="kicker">Ishlaringda omad</div><h2>Barcha rejalaring amalga oshsin!</h2><p>Qilgan har bir ishingda omad yor bo‘lsin. Mehnatingning rohatini ko‘r, boshlagan ishlaringni muvaffaqiyat bilan yakunla.</p><div class="wishes"><div class="wish"><b>✧</b>Har bir ishingda omad</div><div class="wish"><b>☆</b>Yangi imkoniyatlar</div><div class="wish"><b>↗</b>Katta yutuqlar</div><div class="wish"><b>♡</b>Ko‘ngil xotirjamligi</div></div><div class="actions"><button onclick="go(3)">Davom etish →</button></div></section>
+<section class="scene" data-scene="3"><div class="progress">04 / 06</div><div class="kicker">Kelajak sari</div><h2>Kelajaging porloq bo‘lsin</h2><p class="note">Oldingga qo‘ygan maqsadlaringga birma-bir yetishingni tilayman.</p><p>O‘qishlaringda va ishlaringda muvaffaqiyat, yangi marralarni zabt etish uchun kuch-g‘ayrat tilayman. Harakatlaring o‘z samarasini bersin, orzularing katta yutuqlarga aylansin.</p><div class="ornament">☾ ✧ ☽</div><div class="actions"><button onclick="go(4)">Yana bir tilak →</button></div></section>
+<section class="scene" data-scene="4"><div class="progress">05 / 06</div><div class="kicker">Doimo baxtli bo‘l</div><h2>Yaxshi kunlar ko‘p bo‘lsin</h2><p>Mustahkam sog‘liq, oilangga tinchlik, qalbingga xotirjamlik va hayotingga fayz tilayman. Atrofingda doimo samimiy insonlar bo‘lsin.</p><p class="note">Kulging ko‘p, tashvishlaring kam bo‘lsin. 🌷</p><div class="actions"><button onclick="go(5)">Oxirgi syurpriz ✨</button></div></section>
+<section class="scene" data-scene="5"><div class="progress">06 / 06</div><div class="kicker">Senga atalgan so‘nggi sahifa</div><h2>Tug‘ilgan kuning bilan, Jasmena!</h2><div class="gift-wrap"><span class="spark" style="top:10px;left:15px">✦</span><span class="spark" style="top:30px;right:8px;animation-delay:.8s">✧</span><span class="spark" style="bottom:5px;left:25px;animation-delay:1.1s">✦</span><span class="spark" style="bottom:20px;right:15px;animation-delay:.4s">✧</span><div class="gift"><div class="bow"></div></div></div><p>Bugun va har doim hayoting chiroyli lahzalarga to‘la bo‘lsin.</p><button onclick="reveal()">🎁 Sovg‘ani ochish</button><div class="hidden-message" id="hidden"><div class="note">Kichik esdalik, katta tilaklar… ♡</div><p>Jasmena, yuzingdan tabassum, qalbingdan umid arimasin. Ishlaringda omad, kelajagingda katta yutuqlar va barcha ezgu orzularing ro‘yobini tilayman. Baxtli bo‘l, doimo olg‘a intil!</p><div class="ornament">✦ ♡ ✦</div><p>Samimiy tilaklar bilan ✨</p></div><div class="actions"><button onclick="go(0)">Boshidan ko‘rish ↻</button></div></section>
+</main>
+<script>
+function go(n){document.querySelectorAll('.scene').forEach((s,i)=>s.classList.toggle('active',i===n));window.scrollTo({top:0,behavior:'smooth'});burst(n===5?90:28)}
+function reveal(){document.getElementById('hidden').classList.add('show');burst(120)}
+const canvas=document.getElementById('stars'),ctx=canvas.getContext('2d');let stars=[];
+function resize(){canvas.width=innerWidth*devicePixelRatio;canvas.height=innerHeight*devicePixelRatio;ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);stars=Array.from({length:Math.min(180,Math.floor(innerWidth/4))},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*1.7+.2,a:Math.random(),v:Math.random()*.012+.003,h:Math.random()>.8?320:42}))}
+function draw(){ctx.clearRect(0,0,innerWidth,innerHeight);stars.forEach(s=>{s.a+=s.v;if(s.a>1||s.a<.12)s.v*=-1;ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fillStyle=`hsla(${s.h},85%,82%,${Math.max(.12,s.a)})`;ctx.shadowBlur=7;ctx.shadowColor='#f0d2a0';ctx.fill()});requestAnimationFrame(draw)}
+function burst(count=35){const fx=document.getElementById('fx');for(let i=0;i<count;i++){const el=document.createElement('span');el.className='floating';el.textContent=['✦','✧','♡','✺','·','❋'][Math.floor(Math.random()*6)];el.style.left=Math.random()*100+'vw';el.style.color=Math.random()>.65?'#f3b9d5':'#f0d2a0';el.style.fontSize=(12+Math.random()*22)+'px';el.style.animationDuration=(2.2+Math.random()*2.4)+'s';el.style.setProperty('--drift',((Math.random()-.5)*180)+'px');fx.appendChild(el);setTimeout(()=>el.remove(),5000)}}
+addEventListener('resize',resize);resize();draw();setInterval(()=>{if(Math.random()>.45)burst(2)},1800);
+</script></body></html>
